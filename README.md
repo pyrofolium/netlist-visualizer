@@ -153,8 +153,9 @@ signature of `(x: NetList) => TrueOrError`. Then a single aggregation function
 aggregates all of these functions into a single large verify function that lists all
 possible violations. It's straightforward to extend.
 
-Zod is extensively used here both to generate types and do runtime checks on incoming types
-from IO to make sure things are safe.
+Zod is extensively used throughout the code both to generate types and do runtime checks on incoming types
+from IO to make sure things are safe. Zod verifies whether the code fits the schema but logical violations
+like a GND pin connected to a GND net will be caught by the verify function.
 
 ### Code organization
 
