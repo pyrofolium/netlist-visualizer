@@ -124,8 +124,8 @@ to avoid drawing lines on top of each other as much as possible.
 
 ### Optimizations
 
-Dijkstra's algorithm is expensive If the grid is N*N and we have M components with each component having P pins,
-Then the cost of the algo is O(N^2*M*P*N^2) for one netlist. This visibly takes 2 or 3 seconds at a time to render
+Dijkstra's algorithm is expensive If the grid is N\*N and we have M components with each component having P pins,
+Then the cost of the algo is O(N^2\*M\*P\*N^2) for one netlist. This visibly takes 2 or 3 seconds at a time to render
 in your browser, but you will never actually see this loading time because of the optimizations I did.
 
 All of these calculations are indeed happening on the front end, and you can click "Random"
