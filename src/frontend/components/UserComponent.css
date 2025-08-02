@@ -1,0 +1,46 @@
+.user-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.user-container label {
+    font-size: 1.3em;
+}
+
+.user-container span {
+    margin: 0.05rem;
+}
+
+.switcher a:hover {
+    cursor: pointer;
+}
+
+.text-shadow {
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9),
+    0 0 15px rgba(0, 0, 0, 0.9);
+
+}
+
+

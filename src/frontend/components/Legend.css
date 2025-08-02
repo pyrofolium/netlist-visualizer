@@ -1,0 +1,38 @@
+.legend {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    max-height: 80%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.legend-header {
+    position: sticky;
+    top: 0;
+    padding-bottom: 0;
+    z-index: 1;
+}
+
+.legend h4 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.legend-content {
+    overflow-y: auto;
+    max-height: calc(80vh - 40px);
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.legend-item {
+    margin: 0;
+}

@@ -1,0 +1,23 @@
+DROP TABLE IF EXISTS netlists;
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users
+(
+    id         SERIAL PRIMARY KEY,
+    username   VARCHAR(255) NOT NULL UNIQUE,
+    password   VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE netlists
+(
+    id         SERIAL PRIMARY KEY,
+    user_id    INTEGER      NOT NULL REFERENCES users (id) ON DELETE CASCADE,
+    name       VARCHAR(255) NOT NULL,
+    netlist    JSONB        NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX idx_netlists_user_id ON netlists (user_id);

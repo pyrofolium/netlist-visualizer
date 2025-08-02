@@ -1,0 +1,76 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    overflow: auto;
+    max-height: 75%;
+    width: 220px;
+}
+
+.sidebar.collapsed {
+    transform: translateY(-50%) translateX(-91%);
+}
+
+.sidebar-content {
+    padding: 1.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.sidebar li {
+    padding: 2px 0;
+}
+
+.sidebar-title {
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-title {
+
+}
+
+.collapse-column {
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #2b2b2b;
+}
+
+.collapse-icon {
+    font-size: 14px;
+}
+
+ul li a {
+    font-size: 1.2rem;
+}
+
+.netlist-items {
+    margin: 10px;
+    max-height: 75%;
+    overflow-y: scroll;
+    border-bottom: #a9a9a9 solid;
+}
+
+.netlist-item-invalid {
+    color: red;
+    font-size: 1.2rem;
+}

@@ -1,0 +1,13 @@
+.username {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.profile {
+    font-size: 1.3em;
+    margin: 1rem 1rem;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}

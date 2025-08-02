@@ -1,0 +1,12 @@
+.filename {
+    color: ghostwhite;
+    /*opacity: 50%;*/
+    /*font-family: Helvetica, sans-serif;*/
+    font-size: x-large;
+}
+
+.info-pane {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}

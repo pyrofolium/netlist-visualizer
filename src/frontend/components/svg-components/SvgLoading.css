@@ -1,0 +1,26 @@
+.svg-loading-container {
+    display: inline-block;
+}
+
+.svg-loading-spinner {
+    transform-origin: center;
+    animation-name: spinner-rotate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spinner-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Respect user's preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .svg-loading-spinner {
+        animation: none;
+    }
+}

@@ -1,0 +1,41 @@
+.bar {
+    background-color: #333;
+    color: white;
+    padding: .5rem;
+    z-index: 999;
+    margin: 0.5rem;
+    border: #a9a9a9 solid;
+    border-radius: 2px;
+}
+
+#root {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.content {
+    /*margin-bottom: 20px;*/
+}
+
+.auth-toggle {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.auth-toggle button {
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    padding: 0;
+    margin-left: 5px;
+}
+
+.auth-toggle button:hover {
+    color: #004499;
+}

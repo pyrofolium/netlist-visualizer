@@ -1,0 +1,98 @@
+.generator-modal {
+    /* Positioning */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Lower than ErrorComponent's z-index of 10000 */
+
+    /* Size */
+    max-height: 75%;
+
+    /* Scrolling behavior */
+    overflow-y: auto; /* Enables scrolling when content overflows */
+
+    /* Allow text selection for copying */
+
+    /* Smoother scrolling */
+    scroll-behavior: smooth;
+
+    /* Better scrollbar styling for modern browsers */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #888 #f1f1f1; /* Firefox */
+
+    /* Content alignment - stack children vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    /* No padding to ensure the bar fits the table exactly */
+    box-sizing: border-box;
+}
+
+/* Webkit (Chrome, Safari, Edge) scrollbar styling */
+.generator-modal::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.generator-modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.generator-modal::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.generator-modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Table styling with white borders */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    font-size: 13px;
+    padding: 0;
+}
+
+td a {
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.title-info {
+    width: 100%;
+}
+
+.generator_modal .bar {
+    width: 100%;
+    /*overflow-x: auto;*/
+}
+
+.title-info h4 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling for login links */
+.login-link {
+    color: #4a90e2; /* Blue color for links */
+    cursor: pointer; /* Finger cursor when hovered */
+    text-decoration: underline; /* Underline to indicate it's clickable */
+}
+
+.login-link:hover {
+    color: #2a6fc9; /* Darker blue when hovered */
+}
