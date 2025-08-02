@@ -112,14 +112,17 @@ The algorithm to draw the paths goes like this:
 6. Crossing another wire on the grid costs 999 points, so the algorithm won't
    touch or cross another wire unless it absolutely has to.
 7. Traveling diagonally costs 3 points, traveling horizontally costs 2 points. The algorithm biases towards
-   horizontal and vertical paths, but often diagonal paths cost 3 points when the same path costs 4 points when done
-   horizontally and vertically. By adjusting the cost this way, I prevent the path from excessively zigzagging along
-   diagonals.
+   horizontal and vertical paths, but often diagonal paths are shorter and you can arrive at a point with a single
+   movement
+   with a single movement cost of 3 points but to get to that same point using only horizontal moves you have to take
+   two steps of cost 2 which adds up to 4.
+   If I don't program it this way and leave all directions with cost 1, the path finding algorithm actually can often
+   just zigzag towards the goal, so diagonal travel
+   must be made more expensive than vertical. (and in reality the diagonal path is slightly longer too.)
 8. Total cost of one node movement = direction_travelling + intrinsic_cost_of_cell(wires, components) + did_wire_turn.
-   The algorithm
-   minimizes this cost as it heads towards the nearest goal point.
+   The algorithm minimizes this cost as it heads towards the nearest goal point.
 
-Overall, the algorithm above produces wiring's that uses space most efficiently while attempting
+Overall, the algorithm above produces wiring that uses space most efficiently while attempting
 to avoid drawing lines on top of each other as much as possible.
 
 ### Optimizations
