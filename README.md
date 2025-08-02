@@ -113,12 +113,10 @@ The algorithm to draw the paths goes like this:
    touch or cross another wire unless it absolutely has to.
 7. Traveling diagonally costs 3 points, traveling horizontally costs 2 points. The algorithm biases towards
    horizontal and vertical paths, but often diagonal paths are shorter and you can arrive at a point with a single
-   movement
-   with a single movement cost of 3 points but to get to that same point using only horizontal moves you have to take
-   two steps of cost 2 which adds up to 4.
-   If I don't program it this way and leave all directions with cost 1, the path finding algorithm actually can often
-   just zigzag towards the goal, so diagonal travel
-   must be made more expensive than vertical. (and in reality the diagonal path is slightly longer too.)
+   movement cost of 3 points but to get to that same point using only horizontal moves you have to take
+   two steps of cost 2 which adds up to 4. If I don't program it this way and leave all directions with cost 1, the
+   path finding algorithm actually can often just zigzag towards the goal, so diagonal travel
+   must be made more expensive than vertical/horizontal. (and in reality the diagonal path is slightly longer too.)
 8. Total cost of one node movement = direction_travelling + intrinsic_cost_of_cell(wires, components) + did_wire_turn.
    The algorithm minimizes this cost as it heads towards the nearest goal point.
 
