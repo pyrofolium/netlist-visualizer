@@ -73,8 +73,8 @@ by id:
     - Click generate test data to generate a bunch of random users and netlists per users. The gui will display
       All the information related to what was generated.
         - Passwords and usernames are cached and when known you can click the user to login into a sample user
-        - If the cache is blown, passwords are unretrievable and you will see <UNKNOWN> just regenerate the data if this
-          happens.
+      - If the cache is blown, passwords are unretrievable and you will see \<Unknown\> in the password field.
+        In this case just regenerate the data if this happens.
 - The right upper corner of the screen contains the login menu. It's intuitive
 - As soon as you login you'll see a collapsible side bar to the left that allows you
   to select a netlist to view and upload a netlist if you wish as well.
