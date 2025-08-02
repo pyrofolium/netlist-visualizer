@@ -181,9 +181,10 @@ But given what I built, I kept it as simple as possible, and I segregated the co
 other portions of the code.
 
 The sheer complexity just for a take-home likely makes it work against me as I remember you said it should be simple.
-But Either way
-I want to thank you for giving me such an interesting assignment. I learned a lot. I'm actually primarily
-a backend developer, but I was able to go deep into the frontend as well for this assignment. 
+But Either way I want to thank you for giving me such an interesting assignment. I learned a lot. I am a full stack
+developer
+but I lean more heavily towards the backend and this project I feel was more frontend heavy so this project allowed me
+to go really deep and learn a lot about the frontend.
 
 
 
