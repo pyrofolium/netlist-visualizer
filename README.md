@@ -171,21 +171,5 @@ Since both backend and frontend code are in Typescript both the frontend and bac
 - JSX and React components mostly make up the frontend folder.
 - see the public folder for the SQL schema used in the db.
 
-## Conclusion
-
-To be perfectly honest, I realize I got way too excited working on this project on the weekends and went a little
-overboard with this assignment.
-The complexity unfortunately ballooned. With something like this, unfortunately, you can't keep it simple because what
-I did is just intrinsically complex and there's no reducing it further.
-
-But given what I built, I kept it as simple as possible, and I segregated the complexity and kept it from leaking into
-other portions of the code.
-
-The sheer complexity just for a take-home likely makes it work against me as I remember you said it should be simple.
-But Either way I want to thank you for giving me such an interesting assignment. I learned a lot. I am a full stack
-developer
-but I lean more heavily towards the backend and this project I feel was more frontend heavy so this project allowed me
-to go really deep and learn a lot about the frontend.
-
 
 
