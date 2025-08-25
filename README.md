@@ -171,5 +171,8 @@ Since both backend and frontend code are in Typescript both the frontend and bac
 - JSX and React components mostly make up the frontend folder.
 - see the public folder for the SQL schema used in the db.
 
+### Debug link
 
+Contains code that generates sample users and passwords. Because this is a demo I have this route here for easier exploration, 
+but normally this is a security issue and passwords and users and random user generation will not be allowed. 
 
