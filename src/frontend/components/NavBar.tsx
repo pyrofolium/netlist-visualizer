@@ -1,5 +1,5 @@
-import {useContext, useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {useContext, useEffect, useRef, useState} from 'react'
+import {Link, useNavigate} from 'react-router-dom'
 import './NavBar.css'
 import {
     SVG_RANDOM_QUEUE_SIZE,
@@ -13,10 +13,14 @@ import {createRandomNetList} from '../../netlist/netlist-generator'
 import SvgQueueContext from '../context/SvgCacheQueueContext'
 import SvgNetList from './svg-components/SvgNetList'
 
-const NavBar = () => {
+const NavBar = ({singleMode}: {singleMode?: boolean} = {singleMode: false}) => {
 
     const svgQueue = useContext(SvgQueueContext)
     const [workerTrigger, setWorkerTrigger] = useState<boolean>(false)
+    const randomLinkRef = useRef<HTMLAnchorElement | null>(null)
+    const navigate = useNavigate()
+
+
 
 
     useEffect(() => {
@@ -74,15 +78,39 @@ const NavBar = () => {
     }, [svgQueue, workerTrigger])
 
 
+    useEffect(() => {
+        if (!singleMode) return
+
+        let timeoutId: number | undefined
+        let cancelled = false
+
+        const tick = () => {
+            if (cancelled) return
+            // navigate instead of simulating a click
+            navigate('/')
+            timeoutId = window.setTimeout(tick, 1000)
+        }
+
+        timeoutId = window.setTimeout(tick, 1000)
+
+        return () => {
+            cancelled = true
+            if (timeoutId !== undefined) clearTimeout(timeoutId)
+        }
+    }, [singleMode, navigate])
+
     return (
         <>
             <nav className="navbar bar">
                 <ul className="navbar-links">
-                    <li><Link to="/">HOME</Link></li>
-                    <li><Link onClick={() => {
+                    {!singleMode && <li><Link to="/">HOME</Link></li>}
+                    {!singleMode && <li><Link onClick={() => {
                         setWorkerTrigger(!workerTrigger)
-                    }} to="/random">RANDOM</Link></li>
-                    <li><Link to="/debug" style={{color: 'red'}}>DEBUG</Link></li>
+                    }} to="/random">RANDOM</Link></li>}
+                    {!singleMode && <li><Link to="/debug" style={{color: 'red'}}>DEBUG</Link></li>}
+                    {singleMode && <li><Link ref={randomLinkRef} onClick={() => {
+                        setWorkerTrigger(!workerTrigger)
+                    }} to="/">RANDOM</Link></li>}
                 </ul>
             </nav>
         </>

@@ -9,7 +9,7 @@ export function createRandomNetList(maxComponents: number, maxPinsPerComponent: 
     const allPins: Pin[] = []
     let currentId = 0
     for (let i = 0; i < componentAmount; i++) {
-        const pinAmount = randInt(2, maxPinsPerComponent)
+        const pinAmount = randInt(4, maxPinsPerComponent)
         const pins: Pin[] = []
         if (shouldIncludePower) {
             const powerPin: Pin = {

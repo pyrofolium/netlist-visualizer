@@ -1,5 +1,5 @@
 {
-  "name": "quilter-takehome",
+  "name": "netlist-visualizer",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,6 +7,7 @@
     "clean": "rimraf build/*",
     "dev-frontend": "vite --config vite.frontend.config.ts",
     "build:frontend": "vite build --config vite.frontend.config.ts",
+    "dev-frontend:single": "vite --config vite.frontend.config.ts --open /single.html",
     "build:worker": "vite build --config vite.worker.config.js",
     "build:backend": "tsup",
     "build": "npm run clean && concurrently \"npm run build:frontend\" \"npm run build:backend\"",
